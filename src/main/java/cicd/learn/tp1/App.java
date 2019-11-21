@@ -8,6 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "CI/CD rocks !" );
+        System.out.print( "CI/CD rocks !" );
+        System.out.println(" :)");
+        System.out.println("par Arthur GUERS...");
+
     }
 }
