@@ -16,7 +16,7 @@ pipeline {
 	stage('Package') {
 	  steps {
 	    echo 'packaging...'
-	    bat 'mvn install'
+	    bat 'mvn install --DskipTests'
 	    }
 	  }
 	stage('archivage') {
