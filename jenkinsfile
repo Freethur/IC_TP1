@@ -1,0 +1,30 @@
+pipeline {
+  agent any
+    stages {
+      stage('Build') {
+        steps {
+	  echo 'building...'
+	  bat 'mvn build'
+	  }
+	}
+	stage('Test') {
+	  steps {
+	    echo 'testing...'
+	    bat 'mvn test'
+	    }
+	  }
+	stage('Package') {
+	  steps {
+	    echo 'packaging...'
+	    bat 'mvn package'
+	    }
+	  }
+	stage('archivage') {
+	  steps {
+	    echo 'archiving...'
+	    archiveArtifacts artifacts: '**/target/*.jar, fingerprint: true
+	    }
+	  }
+	}
+}
+
