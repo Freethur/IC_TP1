@@ -22,7 +22,7 @@ pipeline {
 	stage('archivage') {
 	  steps {
 	    echo 'archiving...'
-	    archiveArtifacts artifacts: '**/target/*.jar, fingerprint: true
+	    archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 	    }
 	  }
 	}
