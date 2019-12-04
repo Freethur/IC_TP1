@@ -19,7 +19,7 @@ pipeline {
 	    bat 'mvn install -DskipTests'
 	    }
 	  }
-	stage('archivage') {
+	stage('Archivage') {
 	  steps {
 	    echo 'archiving...'
 	    archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
